@@ -1,0 +1,173 @@
+SOFTEX Lógica de Programação
+Módulo 01 Projeto 05
+
+Elabore um algoritmo que possa descobrir, através de perguntas e respostas, qual meio de transporte o usuário está pensando.
+O usuário deverá escolher uma das seguintes opções:
+
+- Trator
+- Moto
+- Bicicleta
+- Trem
+- Carro
+- Caminhão
+- Ônibus
+- Paraquedas
+- Balão
+- Avião
+- Helicóptero
+- Submarino
+- Barco
+- Navio
+- Lancha
+
+Para chegar ao resultado, só devem ser usadas perguntas que retornem "Sim" ou "Não".
+
+Exemplo:
+É terrestre? Sim.
+Cabe apenas uma pessoa? Sim.
+É pesado? Não.
+Tem pedal? Sim.
+Então, o transporte escolhido foi a bicicleta.
+
+Para chegar ao resultado de cada uma das opções, use o modelo ilustrado na imagem em anexo. 
+
+//Declarando as variaveis
+DECLARE CARACTER vResultado; // Resultado que será impresso ao usuário ao final do questionário
+DECLARE LOGICO vResposta; // Resposta do usuário às perguntas (Sim ou Não)
+
+vResultado <- "Não encontrado"; // Resposta default para quando não encontrar o veículo correto
+
+ESCREVA("É terrestre?");
+LEIA(vResposta);
+SE(vResposta)ENTAO // Caso seja terrestre
+	ESCREVA("Cabe apenas uma pessoa?");
+	LEIA(vResposta);
+	SE(vResposta)ENTAO // Caso Cabe apenas uma pessoa
+		ESCREVA("É pesado?");
+		LEIA(vResposta);
+		SE(vResposta)ENTAO // É pesado
+			vResultado <- "Então, o transporte escolhido foi o trator.";
+		SENAO
+			ESCREVA("Tem pedal?");
+			LEIA(vResposta);
+			SE(vResposta)ENTAO // Caso Tem pedal
+				vResultado <- "Então, o transporte escolhido foi a Bicicleta.";
+			FIMSE
+		FIMSE
+	SENAO
+		ESCREVA("Usa capacete?");
+		LEIA(vResposta);
+		SE(vResposta)ENTAO // Caso Usa capacete
+			vResultado <- "Então, o transporte escolhido foi a moto.";
+		SENAO
+			ESCREVA("Tem passageiro?");
+			LEIA(vResposta);
+			SE(vResposta)ENTAO // Caso Tem passageiro
+				ESCREVA("Usa trilho?");
+				LEIA(vResposta);
+				SE(vResposta)ENTAO // Caso Usa trilho
+					vResultado <- "Então, o transporte escolhido foi o trem.";
+				SENAO
+					ESCREVA("Anda na pista?");
+					LEIA(vResposta);
+					SE(vResposta)ENTAO // Caso Anda na pista
+						ESCREVA("É alto?");
+						LEIA(vResposta);
+						SE(vResposta)ENTAO // Caso É alto
+							ESCREVA("Usa carroceria?");
+							LEIA(vResposta);
+							SE(vResposta)ENTAO // Caso Usa carroceria
+								vResultado <- "Então, o transporte escolhido foi o caminhão.";
+							SENAO
+								ESCREVA("Pode ter cobrador?");
+								LEIA(vResposta);
+								SE(vResposta)ENTAO // Caso Pode ter cobrador
+									vResultado <- "Então, o transporte escolhido foi o ônibus.";
+								FIMSE
+							FIMSE
+						SENAO	
+							ESCREVA("É veículo leve?");
+							LEIA(vResposta);
+							SE(vResposta)ENTAO // Caso É veículo leve
+								vResultado <- "Então, o transporte escolhido foi o carro.";
+							FIMSE
+						FIMSE
+					FIMSE
+				FIMSE
+			FIMSE
+		FIMSE
+	FIMSE
+SENAO
+	ESCREVA("É aéreo?");
+	LEIA(vResposta);
+	SE(vResposta)ENTAO // Caso É aéreo
+		ESCREVA("Precisa pular?");
+		LEIA(vResposta);
+		SE(vResposta)ENTAO // Caso Precisa Pular
+			vResultado <- "Então, o transporte escolhido foi a asa delta.";
+		SENAO
+			ESCREVA("Viaja dentro?");
+			LEIA(vResposta);
+			SE(vResposta)ENTAO // Caso Viaja dentro
+				ESCREVA("É devagar?");
+				LEIA(vResposta);
+				SE(vResposta)ENTAO // Caso É devagar
+					vResultado <- "Então, o transporte escolhido foi o balão.";
+				SENAO
+					ESCREVA("Tem piloto?");
+					LEIA(vResposta);
+					SE(vResposta)ENTAO // Caso Tem piloto
+						ESCREVA("Possui asas fixas?");
+						LEIA(vResposta);
+						SE(vResposta)ENTAO // Caso Possui asas fixas
+							vResultado <- "Então o transporte escolhido foi o avião.";
+						SENAO
+							ESCREVA("Faz voo vertical?");
+							LEIA(vResposta);
+							SE(vResposta)ENTAO // Caso Faz voo vertical
+								vResultado <- "Então, o transporte escolhido foi o helicóptero.";
+							FIMSE
+						FIMSE
+					FIMSE
+				FIMSE
+			FIMSE
+		FIMSE
+	SENAO
+		ESCREVA("É aquático?");
+		LEIA(vResposta);
+		SE(vResposta)ENTAO // Caso É aquático
+			ESCREVA("É coberto d'água?");
+			LEIA(vResposta);
+			SE(vResposta)ENTAO // Caso É coberto d'água
+				vResultado <- "Então, o transporte escolhido foi o submarino.";
+			SENAO
+				ESCREVA("Navega na água?");
+				LEIA(vResposta);
+				SE(vResposta)ENTAO // Caso Navega na água
+					ESCREVA("Possui vela?");
+					LEIA(vResposta);
+					SE(vResposta)ENTAO // Caso Possui vela
+						vResultado <- "Então, o transporte escolhido foi o barco.";
+					SENAO
+						ESCREVA("Tem motor?");
+						LEIA(vResposta);
+						SE(vResposta)ENTAO // Caso Tem motor
+							ESCREVA("É alto?");
+							LEIA(vResposta);
+							SE(vResposta)ENTAO // Caso É alto
+								vResultado <- "Então, o transporte escolhido foi o navio.";
+							SENAO
+								ESCREVA("Pode ser descoberto?");
+								LEIA(vResposta);
+								SE(vResposta)ENTAO // Caso Pode ser descoberto
+									vResultado <- "Então, o transporte escolhido foi a lancha.";
+								FIMSE
+							FIMSE
+						FIMSE
+					FIMSE
+				FIMSE
+			FIMSE
+		FIMSE
+	FIMSE
+FIMSE
+ESCREVA(vResultado);
