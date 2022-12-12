@@ -1,0 +1,18 @@
+Algoritmo "Bomba Relógio"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Descrição   : Código que executa a contagem regressiva de uma bomba, informando o número de segundos para explodir. Ele mostra a mensagem 
+// “iniciando contagem regressiva”, os segundos passados e, no final, a mensagem “BUM!”.
+// Autor(a)    : Elis Gonçalves Mendes
+// Data atual  : 12/12/2022
+
+
+
+import time 
+print("Essa mensagem vai se autodestruir em 30 segundos!")
+print("Iniciando contagem regressiva. Corra!")
+
+for segundos in range(30,0,-1):
+    print(segundos)
+    time.sleep(1)
+
+print("Bum!!!!!!!!!!!!! Mensagem deletada!")
