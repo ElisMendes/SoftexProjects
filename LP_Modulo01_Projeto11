@@ -1,0 +1,44 @@
+// PROJETO CALCULADORA
+// CALCULA OPERAÇÕES COM 2 NÚMEROS.
+
+numero1= int(input('Digite um numero: '))
+numero2= int(input('Digite um numero: '))
+operador = str(input('Operacoes: 1 = Soma, 2 = Subtracao, 3 = Multiplicacao, 4 = Divisao. Digite a operacao que deseja realizar. '))
+print (Operacoes: 1 = Soma, 2 = Subtracao, 3 = Multiplicacao, 4 = Divisao. Digite a operacao que deseja realizar.)
+
+
+def calculadora(numero1, numero2, operacao):
+  if operacao == 1:
+    resultado = numero1 + numero2
+  elif operacao == 2:
+    resultado = numero1 - numero2
+  elif operacao == 3:
+    resultaado = numero1 * numero2
+  elif operacao == 4:
+    resultado = numero1 / numero2
+  else:
+    resultado = 0
+    return resultado
+    
+def soma:
+   soma = num1 + num2
+   print(soma)
+   print('Resultado =', soma)
+   return soma
+
+def subtracao:
+   subtracao = num1 - num2
+   print(subtracao)
+   print('Resultado =', subtracao)
+   return subtracao
+
+def multiplicacao:
+   multiplicacao = num1 * num2
+   print(multiplicacao)
+   print('Resultado =', multiplicacao)
+   return multiplicacao
+
+def divisao:
+   divisao = num1 / num2
+   print('Resultado =', divisao)
+   return divisao
